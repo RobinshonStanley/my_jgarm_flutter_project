@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "601192099785",
+    "project_id": "my-jgarm-flutter-project",
+    "storage_bucket": "my-jgarm-flutter-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601192099785:android:5b2bb556f3d8b98a044218",
+        "android_client_info": {
+          "package_name": "com.jgarm.flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfoDn_kFKSkIjouZf_Jhbb2TFkm7vJpcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
