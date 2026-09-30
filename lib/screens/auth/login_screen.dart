@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'register_screen.dart';
 import 'forgot_password_screen.dart';
+import '../home_dashboard.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -37,13 +38,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (!mounted) return;
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Login successful!'),
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const HomeDashboard(),
         ),
       );
-
-      // We will connect this to the JGARM Dashboard next.
     } on FirebaseAuthException catch (e) {
       String message = 'Login failed. Please try again.';
 
@@ -88,10 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   @override
-  Widget build(
-    
-    
-    BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -105,15 +102,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   const SizedBox(height: 30),
 
-                  // JGARM Logo Placeholder
-                  Image.asset('assets/images/church_logo.jpg',
-                  height:220,),
-                  CircleAvatar(
+                  // JGARM Logo
+                  Image.asset(
+                    'assets/images/church_logo.jpg',
+                    height: 220,
+                  ),
+
+                  const CircleAvatar(
                     radius: 45,
                     backgroundColor: Colors.lightBlue,
-                    child: const Icon(
+                    child: Icon(
                       Icons.church,
-                      size: 50,
                       color: Colors.white,
                     ),
                   ),
